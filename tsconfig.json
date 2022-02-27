@@ -1,20 +1,29 @@
 {
-    "compilerOptions": {
-      "target": "es2017",
-      "module": "esnext",
-      "declaration": true,
-      "emitDeclarationOnly": true,
-      "declarationDir": "types",
-      "outDir": "./dist",
-      "strict": true,
-      "allowSyntheticDefaultImports": true,
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "jsx": "react",
-      "types": ["react", "react-native"],
-      "baseUrl": ".",
-    },
-    "include": ["src", "src/custom.d.ts"],
-    "exclude": ["node_modules", "**/__tests__/*"]
-  }
-  
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "types",
+    "outDir": "./dist",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "types": [
+      "react",
+      "react-native"
+    ],
+    "baseUrl": ".",
+  },
+  "include": [
+    "src",
+    "src/custom.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*"
+  ]
+}

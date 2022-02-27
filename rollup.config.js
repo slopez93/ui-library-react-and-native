@@ -1,4 +1,4 @@
-import resolve from "@rollup/plugin-node-resolve";
+import babel from "@rollup/plugin-babel";
 import typescript from "@rollup/plugin-typescript";
 import { terser } from "rollup-plugin-terser";
 import dts from "rollup-plugin-dts";
@@ -22,9 +22,13 @@ const getESM = (override) => ({ ...esm, ...override });
 
 const commonPlugins = [
   typescript({ tsconfig: "./tsconfig.json" }),
-  external(),
-  resolve(),
+  babel({
+    configFile: require.resolve("./babel.config.js"),
+    exclude: ["node_modules/**", "../../node_modules/**"],
+    babelHelpers: 'bundled'
+  }),
   terser(),
+  external(),
 ];
 
 const configBase = {

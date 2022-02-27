@@ -1,3 +1,3 @@
-export function helloWorld(): void {
-  console.log("hello workd");
-}
+export { ThemeProvider } from "./theme/provider";
+export { theme } from "./theme/theme";
+export * from "./components";
