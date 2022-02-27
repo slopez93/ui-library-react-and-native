@@ -1,9 +1,9 @@
 import React, { ComponentProps } from "react";
 import { Text as DripsyText } from "dripsy";
 
-type TextProps = ComponentProps<typeof DripsyText>;
+type Props = ComponentProps<typeof DripsyText>;
 
-const Text = ({ sx, ...props }: TextProps) => {
+const Text = ({ sx, ...props }: Props) => {
   return <DripsyText sx={{ ...sx }} {...props} />;
 };
 
